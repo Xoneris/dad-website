@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import Kompra1_1 from "../components/Kompra1/Kompra1_1.svelte"
+
+---
+
+<Layout>
+
+    <section class="p-4 flex flex-col gap-4">
+
+        <h1 class="text-3xl">Kompra (Standortbestimmung und Kompetenzeinschätzung)</h1>
+
+        <p>Bild</p>
+
+        <Kompra1_1 client:load />
+        
+        <Kompra1_1 client:load />
+
+    </section>
+
+</Layout>
