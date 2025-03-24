@@ -1,0 +1,23 @@
+---
+import { getEntry, render } from 'astro:content';
+import Accordion from "../content/Accordion.svelte"
+
+const { content } = Astro.props
+
+const entry = await getEntry(content.collection , content.id);
+
+if (!entry) {
+  throw new Error('Could not find content');
+}
+const { Content } = await render(entry);
+---
+
+<Accordion title={content.data.title} client:load>
+    <Content />
+</Accordion>
+
+<style is:global>
+  td {
+    min-width: 60px;
+  }
+</style>

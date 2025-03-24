@@ -1,22 +1,28 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Paragraph from "../components/content/Paragraph.astro"
 
-import Kompra1_1 from "../components/Kompra1/Kompra1_1.svelte"
+import { getCollection } from 'astro:content';
 
+const paragraphs = await getCollection('kompra1');
 ---
 
 <Layout>
-
     <section class="p-4 flex flex-col gap-4">
-
         <h1 class="text-3xl">Kompra (Standortbestimmung und Kompetenzeinschätzung)</h1>
 
         <p>Bild</p>
+        {
+            paragraphs.sort((a,b) => a.data.id - b.data.id).map((paragraph) => (
+                <Paragraph content={paragraph} />
+            ))
+        }
 
-        <Kompra1_1 client:load />
-        
-        <Kompra1_1 client:load />
+        <p>Anhang</p>
+        <a href="/Webseite/Anhang 2_Merkblatt im Umgang mit Datenschutz.pdf" target="_blank" >
+            Merkblatt im Umgang mit Datenschutz
+        </a>
 
     </section>
-
 </Layout>
+

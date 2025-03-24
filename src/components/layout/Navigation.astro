@@ -1,63 +1,50 @@
 ---
+import NavLink from "./NavLink.astro";
+
 
 ---
 
-<nav class="min-w-[300px] max-w-[300px] min-h-full flex flex-col p-4 border">
-
-    <div class="flex flex-col gap-2">
-
-        <p>
-            <a href={"/"}>
-                Home
-            </a>
-        </p>
-
-        <p>
-            <a href={"/Lebenslauf"}>
-                Lebenslauf
-            </a>
-        </p>
-        <p>
-            <a href={"/Kompra1"}>
-                Kompra (Standortbestimmung und Kompetenzeinschätzung)
-            </a>
-        </p>
-        <p>
-            <a href={""}>
-                Organisieren Schützen und Teilen digitaler. Ressourcen 2.3
-            </a>
-        </p>
-        <p>
-            <a href={""}>
-                Aktive Einbindung der Lernenden 5.3
-            </a>
-        </p>
-        <p>
-            <a href={""}>
-                Feedback und Planung 4.3
-            </a>
-        </p>
-        <p>
-            <a href={""}>
-                Hospitalisation vom 10. Januar 2025
-            </a>
-        </p>
-        <p>
-            <a href={""}>
-                Hospitalisation vom 14. Februar 2025
-            </a>
-        </p>
-        <p>
-            <a href={""}>
-                WLI-Check
-            </a>
-        </p>
-        <p>
-            <a href={""}>
-                Kompra (Standortbestimmung 2 und Kompetenzeinschätzung)
-            </a>
-        </p>
-        
+<nav class="min-w-[300px] max-w-[300px] min-h-full flex flex-col p-4 border rounded-r-2xl text-gray-300 border-stone-950 bg-neutral-900">
+    <div class="flex flex-col gap-4 mt-12 w-full">
+        <NavLink
+            title="Home"
+            link="/"
+        />
+        <NavLink
+            title="Lebenslauf"
+            link="/Lebenslauf"
+        />
+        <NavLink
+            title="Kompra (Standortbestimmung und Kompetenzeinschätzung)"
+            link="/Kompra1"
+        />
+        <NavLink
+            title="Organisieren Schützen und Teilen digitaler. Ressourcen 2.3"
+            link="/"
+        />
+        <NavLink
+            title="Aktive Einbindung der Lernenden 5.3"
+            link="/"
+        />
+        <NavLink
+            title="Feedback und Planung 4.3"
+            link="/"
+        />
+        <NavLink
+            title="Hospitalisation vom 10. Januar 2025"
+            link="/"
+        />
+        <NavLink
+            title="Hospitalisation vom 14. Februar 2025"
+            link="/"
+        />
+        <NavLink
+            title="WLI-Check"
+            link="/"
+        />
+        <NavLink
+            title="Kompra (Standortbestimmung 2 und Kompetenzeinschätzung)"
+            link="/"
+        />
     </div>
-
 </nav>
