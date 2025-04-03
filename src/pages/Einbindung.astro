@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Paragraph from "../components/content/Paragraph.astro"
+
+import { getCollection } from 'astro:content';
+
+const paragraphs = await getCollection('einbindung');
+---
+
+<Layout>
+    <section class="p-4 flex flex-col gap-4">
+        <h1 class="text-3xl">Aktive Einbindung der Lernenden 5.3</h1>
+
+        <p>Bild</p>
+        {
+            paragraphs.sort((a,b) => a.data.id - b.data.id).map((paragraph) => (
+                <Paragraph content={paragraph} />
+            ))
+        }
+
+    </section>
+</Layout>

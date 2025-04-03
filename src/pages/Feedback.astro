@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Paragraph from "../components/content/Paragraph.astro"
+
+import { getCollection } from 'astro:content';
+
+const paragraphs = await getCollection('feedback');
+---
+
+<Layout>
+    <section class="p-4 flex flex-col gap-4">
+        <h1 class="text-3xl">Feedback und Planung 4.3</h1>
+
+        <p>Bild</p>
+        {
+            paragraphs.sort((a,b) => a.data.id - b.data.id).map((paragraph) => (
+                <Paragraph content={paragraph} />
+            ))
+        }
+
+        <h2 class="text-xl">Anhang</h2>
+        <a href="/Anhänge/Anhang 3_Auswertung Froms.pdf" target="_blank" class="hover:underline hover:cursor-pointer">
+            Auswertung Forms
+        </a>
+        <a href="/Anhänge/Anhang 4_Mentimeter Feedback vom Unterricht.pdf" target="_blank" class="hover:underline hover:cursor-pointer">
+            Mentimeter
+        </a>
+        <a href="/Anhänge/Anhang 5_Präsentation Digitale Werkstatt.pdf" target="_blank" class="hover:underline hover:cursor-pointer">
+            Präsentationen Digitale Werkstatt
+        </a>
+
+    </section>
+</Layout>
