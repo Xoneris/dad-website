@@ -14,5 +14,14 @@ const einbindung = defineCollection({
 const feedback = defineCollection({
   loader: glob({ pattern: ["**/*.mdx", "**/*.md"], base: "./src/content/feedback"}),
 });
+const hospitalisation1 = defineCollection({
+  loader: glob({ pattern: ["**/*.mdx", "**/*.md"], base: "./src/content/hospitalisation1"}),
+});
+const unterrichtsbesuch = defineCollection({
+  loader: glob({ pattern: ["**/*.mdx", "**/*.md"], base: "./src/content/unterrichtsbesuch"}),
+});
+const wli = defineCollection({
+  loader: glob({ pattern: ["**/*.mdx", "**/*.md"], base: "./src/content/wli"}),
+});
 
-export const collections = { kompra1, organisieren, einbindung, feedback };
+export const collections = { kompra1, organisieren, einbindung, feedback, hospitalisation1, unterrichtsbesuch, wli };

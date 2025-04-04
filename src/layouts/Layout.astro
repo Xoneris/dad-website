@@ -24,4 +24,12 @@ const { title } = Astro.props
 	</body>
 </html>
 
+<script>
 
+	let passcode 
+
+	while (passcode !== "test123") {
+		passcode = window.prompt("Bitte passcode eingeben", "Test?")
+	}
+
+</script>

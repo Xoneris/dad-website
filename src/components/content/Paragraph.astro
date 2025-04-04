@@ -17,15 +17,18 @@ const { Content } = await render(entry);
 </Accordion>
 
 <style is:global>
-  td {
+  #accordion td {
     min-width: 60px;
   }
-  li {
+  #accordion li {
     list-style: circle;
     margin-left: 20px;
   }
   #accordion a {
     color: blue;
     text-decoration: underline;
+  }
+  #accordion th {
+    text-align: left;
   }
 </style>

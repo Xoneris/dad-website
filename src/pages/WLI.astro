@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Paragraph from "../components/content/Paragraph.astro"
+
+import { getCollection } from 'astro:content';
+
+const paragraphs = await getCollection('wli');
+---
+
+<Layout>
+    <section class="p-4 flex flex-col gap-4">
+        <h1 class="text-3xl">WLI-Check</h1>
+
+        <p>
+            Im Unterricht hatten wir die Möglichkeit ein WLI-Check zu machen den ich hier noch einbringen möchte. Der WLI-Check zeigt nach Beantwortung von diversen Fragen auf wie meine Haltung, Motivation und Konzentration während des Unterrichts ist. Ebenfalls der Umgang mit der Zeit, Ängsten und die Verarbeitung von Informationen. Wie sieht es mit der Selbstkontrolle und meiner Prüfungsstrategie aus.
+        </p>
+
+        {
+            paragraphs.sort((a,b) => a.data.id - b.data.id).map((paragraph) => (
+                <Paragraph content={paragraph} />
+            ))
+        }
+
+        <h2 class="text-xl">Anhang</h2>
+        <a href="/Anhänge/Anhang 10_ Protokoll und PP Präsentation.pdf" target="_blank" class="hover:underline hover:cursor-pointer">
+            Protokoll und PP Präsentation
+        </a>
+
+    </section>
+</Layout>
