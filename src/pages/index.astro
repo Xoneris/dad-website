@@ -1,21 +1,73 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
 ---
 
 <Layout>
-	<section class="p-4 flex flex-col justify-center w-1/2">
+	<section class="p-4 flex flex-col gap-4 justify-center">
+
         <h1 class="text-3xl">Portfolio didaktisches Basismodul A Studienjahr 2024 / 2025</h1>
-        <div class="flex w-full justify-between">
-            <div class="flex flex-col">
-                <p>Bild</p>
+
+        <Image
+            src="/images/intro-bild.png"
+            width={282}
+            height={68}
+            alt=""
+        />
+
+        <div class="flex w-full gap-8">
+            <div class="flex flex-col gap-2">
                 <div class="w-[500px] flex justify-between">
-                    <p>Vorname:</p>
+                    <p class="font-bold">Vorname:</p>
                     <p>Martin</p>
                 </div>
+                <div class="w-[500px] flex justify-between">
+                    <p class="font-bold">Adresse:</p>
+                    <div class="flex flex-col">
+                        <p>Rigistrasse 177</p>
+                        <p>CH-6340 Baar</p>
+                    </div>
+                </div>
+                <div class="w-[500px] flex justify-between">
+                    <p class="font-bold">Tel Nr. P:</p>
+                    <p>041 790 03 80</p>
+                </div>
+                <div class="w-[500px] flex justify-between">
+                    <p class="font-bold">Natel:</p>
+                    <p>079 413 18 74</p>
+                </div>
+                <div class="w-[500px] flex justify-between">
+                    <p class="font-bold">E-Mail:</p>
+                    <p>m.maetzler@gmx.ch</p>
+                </div>
+                <div class="w-[500px] flex justify-between">
+                    <p class="font-bold">Dozen:</p>
+                    <p>WBZ Luzern für Hauswarte</p>
+                </div>
             </div>
-            <div>
-                <div class="w-[200px] h-[300px] bg-gray-900 rounded-lg"></div>
+            <Image
+                src="/images/martin.png"
+                width={163}
+                height={239}
+                alt="martin"
+            />
+        </div>
+
+        <div class="w-[500px] flex justify-between">
+            <p class="font-bold">Kursleitung:</p>
+            <div class="flex flex-col gap-2">
+                <p>Cornel Gautschi</p>
+                <p>Michael Marfurt</p>
+                <p>Silvio Ludwig</p>
+                <p>Claudia Kleinholz</p>
             </div>
         </div>
+
+        <Image
+            src="/images/lernziele.png"
+            width={641}
+            height={694}
+            alt="lernziele"
+        />
     </section>
 </Layout>

@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Navigation from "../components/layout/Navigation.astro";
 const { title } = Astro.props
+
 ---
 
 <!doctype html>
@@ -27,9 +28,13 @@ const { title } = Astro.props
 <script>
 
 	let passcode 
+	let confirmed = false
 
-	while (passcode !== "test123") {
-		passcode = window.prompt("Bitte passcode eingeben", "Test?")
-	}
+	// while (passcode !== "test123" && confirmed !== true) {
+	// 	passcode = window.prompt("Bitte passcode eingeben", "Test?")
+	// 	if (passcode === "test123") {
+	// 		confirmed = true
+	// 	}
+	// }
 
 </script>
