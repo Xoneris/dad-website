@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
-import Navigation from "../components/layout/Navigation.astro";
+// import Navigation from "../components/layout/Navigation.astro";
+import Navigation from "../components/layout/Navigation.svelte";
 const { title } = Astro.props
 
 ---
@@ -16,7 +17,7 @@ const { title } = Astro.props
 	</head>
 	<body class="min-w-screen min-h-screen flex bg-neutral-200">
 
-		<Navigation/>
+		<Navigation client:load/>
 
 		<main class="grow-1 min-h-full">
 			<slot />

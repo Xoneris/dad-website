@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 
 
@@ -15,6 +16,7 @@ import Layout from "../layouts/Layout.astro";
         </p>
 
         <h2 class="text-xl">Lebenslauf</h2>
+        <h2 class="text-xl">1.1 Berufserfahrung</h2>
 
         <div class="flex flex-col gap-2">
             <div class="flex gap-2">
@@ -100,6 +102,111 @@ import Layout from "../layouts/Layout.astro";
             </div>
 
         </div>
+
+        <h2 class="text-xl">1.2 Aus und Weiterbildung</h2>
+
+        <div class="flex flex-col gap-2">
+            <div class="flex gap-2">
+                <p class="min-w-[160px]">1992 - heute</p>
+                <div class="flex flex-col">
+                    <p class="font-bold">Weiterbildung in verschiedenen Bereichen:</p>
+                    <p>
+                        SANU, Hebebühnen, IQMS, Qualitäts-Trainer, Berufsbildner, Diverse Tageskurse im Bereich Sicherheit, Buchhaltung und Gastronomie, Dozent im WBZ Luzern HLK Hauswarte.
+                    </p>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <p class="min-w-[160px]">Erreichte Labels:</p>
+                <div class="flex">
+                    <Image
+                        width={222}
+                        height={81}
+                        src={"/images/erreichte-labels.png"}
+                        alt={"erreichte Labels"}
+                    ></Image>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <p class="min-w-[160px]">Sprachaufenthalte:</p>
+                <div class="flex flex-col">
+                    <p>Neuseeland/Australien / Italien</p>
+                    <p>erlernen der Sprachen Englisch und Italienisch</p>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <p class="min-w-[160px]">2021</p>
+                <p>Diplom: Eidgenössisch Diplomierter Hauswart</p>
+            </div>
+            <div class="flex gap-2">
+                <p class="min-w-[160px]">2002</p>
+                <p>Diplom: Gastronomie-Betriebsleiter Gastro Suisse Zürich</p>
+            </div>
+            <div class="flex gap-2">
+                <p class="min-w-[160px]">1984-1987</p>
+                <p>Lehre als Verkäufer / Detailhandelsangestellter</p>
+            </div>
+            <div class="flex gap-2">
+                <p class="min-w-[160px]">1976-1984</p>
+                <p>Grundschulbildung, 6343 Rotkreuz</p>
+            </div>
+        </div>
+
+        <h2 class="text-xl">1.3 Hobbys</h2>
+
+        <div class="flex flex-col gap-2">
+            <div class="flex gap-2">
+                <p class="min-w-[160px]">Familie:</p>
+                <p>Mein Rückhalt im Leben</p>
+            </div>
+            <div class="flex gap-2">
+                <p class="min-w-[160px]">Sport:</p>
+                <p>Wandern, Schnorcheln</p>
+            </div>
+            <div class="flex gap-2">
+                <p class="min-w-[160px]">Reisen:</p>
+                <p>Andere Länder und Kulturen kennen lernen</p>
+            </div>
+            <div class="flex gap-2">
+                <p class="min-w-[160px]">Musik:</p>
+                <p>Ein schöner Ausgleich in meinem Leben</p>
+            </div>
+            <div class="flex gap-2">
+                <p class="min-w-[160px]">PC:</p>
+                <p>Arbeiten mit Musik und Grafikprogrammen</p>
+            </div>
+        </div>
+
+        <h2 class="text-xl">1.4 Weitere Kenntnisse</h2>
+
+        <div class="flex flex-col gap-2">
+            <div class="flex gap-2">
+                <p class="min-w-[160px]">Deutsch:</p>
+                <p>Muttersprache</p>
+            </div>
+            <div class="flex gap-2">
+                <p class="min-w-[160px]">Englisch:</p>
+                <p>mündlich sehr gut, schriftlich gut</p>
+            </div>
+            <div class="flex gap-2">
+                <p class="min-w-[160px]">Französisch:</p>
+                <p>Grundkenntnisse</p>
+            </div>
+            <div class="flex gap-2">
+                <p class="min-w-[160px]">Italienisch:</p>
+                <p>mündlich sehr gut, schriftlich gut</p>
+            </div>
+            <div class="flex gap-2">
+                <p class="min-w-[160px]">EDV:</p>
+                <div class="flex flex-col">
+                    <p>MS Office: sehr gute Kenntnisse</p>
+                    <p>Grafik und Musikprogramme</p>
+                </div>
+            </div>
+        </div>
+
+        <p>
+            Ich hoffe sie haben meinen Werdegang gelesen und wissen nun was mich in den Letzen Jahren alles Beschäftigt und weitergebracht hat. Lernen ist eine Lebensaufgabe, die nie endet. Starten wir nun aber mit diesem Portfolio und dem Studiengang der Didaktik. Eine Standortbestimmung ist für den Anfang immer wichtig.
+        </p>
 
     </section>
 </Layout>

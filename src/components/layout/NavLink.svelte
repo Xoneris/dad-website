@@ -1,0 +1,11 @@
+<script>
+    export let title
+    export let link
+</script>
+
+
+<p class="w-full border-b transition-all pr-2 hover:pl-2 hover:pr-0">
+    <a href={link}>
+        {title}
+    </a>
+</p>

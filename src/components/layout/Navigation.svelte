@@ -1,10 +1,12 @@
----
-import NavLink from "./NavLink.astro";
+<script>
+    import NavLink from "./NavLink.svelte";
+    let hideSidebar = false
+</script>
 
----
+<nav class="{hideSidebar !== true ? "-translate-x-0 min-w-[300px] max-w-[300px] p-4" : "-translate-x-full max-w-0 p-0" } min-h-full flex flex-col border rounded-r-2xl text-gray-300 border-stone-950 bg-neutral-900 overflow-hidden transition-all">
 
-<nav class="min-w-[300px] max-w-[300px] min-h-full flex flex-col p-4 border rounded-r-2xl text-gray-300 border-stone-950 bg-neutral-900">
     <div class="flex flex-col gap-4 mt-12 w-full">
+
         <NavLink
             title="Home"
             link="/"
@@ -45,5 +47,20 @@ import NavLink from "./NavLink.astro";
             title="Kompra (Standortbestimmung 2 und Kompetenzeinschätzung)"
             link="/Kompra2"
         />
+
+    </div>
+
+    <div class="w-full mt-32">
+        <button on:click={() => hideSidebar = true}>
+
+            Hide Sidebar
+        </button>
     </div>
 </nav>
+
+<button 
+    class="{ hideSidebar === true ? "" : "hidden" } fixed w-[100px] border left-0 top-3/4 bg-amber-700 z-50"
+    on:click={() => hideSidebar = false}
+>
+    Show Sidebar
+</button>
