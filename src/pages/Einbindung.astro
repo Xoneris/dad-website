@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Paragraph from "../components/content/Paragraph.astro"
 
 import { getCollection } from 'astro:content';
+import { Image } from "astro:assets";
 
 const paragraphs = await getCollection('einbindung');
 ---
@@ -11,7 +12,12 @@ const paragraphs = await getCollection('einbindung');
     <section class="p-4 flex flex-col gap-4">
         <h1 class="text-3xl">Aktive Einbindung der Lernenden 5.3</h1>
 
-        <p>Bild</p>
+        <Image
+            src={"/images/einbindung.png"}
+            width={296}
+            height={295}
+            alt={"einbindung"}
+        ></Image>
         {
             paragraphs.sort((a,b) => a.data.id - b.data.id).map((paragraph) => (
                 <Paragraph content={paragraph} />

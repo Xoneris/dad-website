@@ -1,5 +1,6 @@
 <script>
     import NavLink from "./NavLink.svelte";
+    import NavDropdown from "./NavDropdown.svelte"
     let hideSidebar = false
 </script>
 
@@ -16,21 +17,10 @@
             link="/Lebenslauf"
         />
         <NavLink
-            title="Kompra (Standortbestimmung und Kompetenzeinschätzung)"
+            title="Standortbestimmung 1 und Zielvereinbarung"
             link="/Kompra1"
         />
-        <NavLink
-            title="Organisieren Schützen und Teilen digitaler. Ressourcen 2.3"
-            link="/Organisieren"
-        />
-        <NavLink
-            title="Aktive Einbindung der Lernenden 5.3"
-            link="/Einbindung"
-        />
-        <NavLink
-            title="Feedback und Planung 4.3"
-            link="/Feedback"
-        />
+        
         <NavLink
             title="Hospitalisation vom 10. Januar 2025"
             link="/Hospitalisation1"
@@ -39,13 +29,27 @@
             title="Unterrichtsbesuch bei einer erfahrenen Lehrperson"
             link="/Unterrichtsbesuch"
         />
-        <NavLink
-            title="WLI-Check"
-            link="/WLI"
-        />
+        <NavDropdown title={"Reflexion Medienwerkstatt"}>
+            <NavLink
+                title="Organisieren Schützen und Teilen digitaler. Ressourcen 2.3"
+                link="/Organisieren"
+            />
+            <NavLink
+                title="Aktive Einbindung der Lernenden 5.3"
+                link="/Einbindung"
+            />
+            <NavLink
+                title="Feedback und Planung 4.3"
+                link="/Feedback"
+            />
+        </NavDropdown> 
         <NavLink
             title="Kompra (Standortbestimmung 2 und Kompetenzeinschätzung)"
             link="/Kompra2"
+        />
+        <NavLink
+            title="WLI-Check"
+            link="/WLI"
         />
 
     </div>
