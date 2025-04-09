@@ -1,15 +1,13 @@
 <script>
+    import { onMount } from 'svelte';
     import NavLink from "./NavLink.svelte";
     import NavDropdown from "./NavDropdown.svelte"
-    let hideSidebar = false
 
-    import { onMount } from 'svelte';
+    let hideSidebar = false
     let currentPath = '';
 
     onMount(() => {
         currentPath = window.location.pathname;
-
-        // Optional: listen to changes
         window.addEventListener('popstate', () => {
         currentPath = window.location.pathname;
         });
