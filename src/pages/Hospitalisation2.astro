@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Paragraph from "../components/content/Paragraph.astro"
+
+import { getCollection } from 'astro:content';
+
+const paragraphs = await getCollection('hospitalisation2');
+---
+
+<Layout>
+    <section class="p-4 flex flex-col gap-4">
+        <h1 class="text-3xl">Besuch durch Lehrbegleitung Hospitalisation vom 28.März 2025</h1>
+
+        {
+            paragraphs.sort((a,b) => a.data.id - b.data.id).map((paragraph) => (
+                <Paragraph content={paragraph} />
+            ))
+        }
+
+        <h2 class="text-xl">Anhang</h2>
+        <a href="/Anhänge/Anhang 14_Protokoll Unterrichtsbesuch WBZ vom 28.3.25.pdf" target="_blank" class="hover:underline hover:cursor-pointer">
+            Protokoll Unterrichtsbesuch WBZ vom 28.3.25
+        </a>
+
+    </section>
+</Layout>

@@ -9,7 +9,7 @@ const paragraphs = await getCollection('hospitalisation1');
 
 <Layout>
     <section class="p-4 flex flex-col gap-4">
-        <h1 class="text-3xl">Hospitalisation vom 10. Januar 2025</h1>
+        <h1 class="text-3xl">Unterrichtsbesuch durch Dozent*in des Regionalteams</h1>
 
         {
             paragraphs.sort((a,b) => a.data.id - b.data.id).map((paragraph) => (

@@ -26,5 +26,8 @@ const wli = defineCollection({
 const kompra2 = defineCollection({
   loader: glob({ pattern: ["**/*.mdx", "**/*.md"], base: "./src/content/kompra2"}),
 });
+const hospitalisation2 = defineCollection({
+  loader: glob({ pattern: ["**/*.mdx", "**/*.md"], base: "./src/content/hospitalisation2"}),
+});
 
-export const collections = { kompra1, organisieren, einbindung, feedback, hospitalisation1, unterrichtsbesuch, wli, kompra2 };
+export const collections = { kompra1, organisieren, einbindung, feedback, hospitalisation1, unterrichtsbesuch, wli, kompra2, hospitalisation2 };

@@ -1,9 +1,22 @@
 <script>
     export let title
+    export let linkOfChildren
+    export let currentPage
+
     let openNavDropdown = false
+
+    $: if(linkOfChildren.includes(currentPage)) {
+        openNavDropdown = true
+    } else {
+        openNavDropdown = false
+    }
+    
 </script>
 
-<div class="w-full border-b transition-all pr-2 hover:pl-2 hover:pr-0" on:click={() => openNavDropdown = !openNavDropdown}>
+<div 
+    class="{ openNavDropdown ? "pl-2" : "hover:pl-2 hover:pr-0 "} { linkOfChildren.includes(currentPage) ? "text-orange-300 border-orange-text-orange-300" : "" }  w-full border-b transition-all hover:cursor-pointer " 
+    on:click={() => openNavDropdown = !openNavDropdown}
+>
     {title}
 </div>
 

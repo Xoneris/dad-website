@@ -3,25 +3,41 @@ import Layout from "../layouts/Layout.astro";
 import Paragraph from "../components/content/Paragraph.astro"
 
 import { getCollection } from 'astro:content';
+import { Image } from "astro:assets";
 
 const paragraphs = await getCollection('kompra2');
 ---
 
 <Layout>
     <section class="p-4 flex flex-col gap-4">
-        <h1 class="text-3xl">Kompra (Standortbestimmung 2 und Kompetenzeinschätzung)</h1>
+        <h1 class="text-3xl">Standortbestimmung 2 und persönlicher Lernzuwachs</h1>
 
-        <p>Bild</p>
+        <Image
+            src={"/images/kompra2.png"}
+            width={441}
+            height={366}
+            alt={"Kompra 2"}
+        ></Image>
+
         {
             paragraphs.sort((a,b) => a.data.id - b.data.id).map((paragraph) => (
                 <Paragraph content={paragraph} />
             ))
         }
 
+        <Image
+            src={"/images/dba-song-bild.png"}
+            width={441}
+            height={366}
+            alt={"DBA & EHB"}
+        ></Image>
+        
         <h2 class="text-xl">Anhang</h2>
+
         <a href="/Anhänge/Anhang 12_KOMPR_2.pdf" target="_blank" class="hover:underline hover:cursor-pointer">
             Kompra 2
         </a>
+
 
     </section>
 </Layout>
