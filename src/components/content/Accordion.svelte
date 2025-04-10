@@ -17,7 +17,7 @@
          />
     </button>
 
-    <div class="{ open === true ? "max-h-[1500px] p-2" : "max-h-0 p-0" } flex flex-col overflow-hidden rounded-lg gap-2 transition-all duration-500 ">
+    <div class="{ open === true ? "max-h-[5000px] p-2" : "max-h-0 p-0" } flex flex-col overflow-hidden rounded-lg gap-2 transition-all duration-500 ">
         <slot/>
     </div>
 </div>

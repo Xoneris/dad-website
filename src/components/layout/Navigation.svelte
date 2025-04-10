@@ -15,7 +15,7 @@
     
 </script>
 
-<nav class="{ hideSidebar !== true ? "-translate-x-0 min-w-[300px] max-w-[300px]" : "-translate-x-full max-w-0" } fixed min-h-full flex flex-col border rounded-r-2xl text-gray-300 border-stone-950 bg-neutral-900 overflow-hidden transition-all">
+<nav class="{ hideSidebar !== true ? "-translate-x-0 min-w-[300px] max-w-[300px]" : "-translate-x-full max-w-0" } fixed min-h-full flex flex-col border rounded-r-2xl text-gray-300 border-stone-950 bg-neutral-900 overflow-hidden transition-all z-50">
 
     <div class="flex flex-col gap-4 mt-12 w-full p-4">
 
@@ -84,7 +84,7 @@
             link="/WLI"
             currentPage={currentPath}
         />
-        <button class="w-full flex gap-4 items-center mt-32 hover:cursor-pointer p-2" on:click={() => hideSidebar = true}>
+        <button class="w-full flex gap-4 items-center mt-28 hover:cursor-pointer p-2" on:click={() => hideSidebar = true}>
             <img
                 src={"/icon-hide-sidebar.svg"}
                 alt={"ausblenden"}
@@ -97,7 +97,7 @@
     </div>
 </nav>
 
-<div class="{ hideSidebar === false ? "min-w-[300px]" : "min-w-0 mr-10"} transition-all">
+<div class="{ hideSidebar === false ? "min-w-0 lg:min-w-[300px]" : "min-w-0 mr-10"} transition-all">
 </div>
 
 <button 
