@@ -1,6 +1,8 @@
 <script>
     export let title 
     let open = false
+
+    const titleWithoutNumbers = title.replace(/^\d+(\.\d+)*\s*/, "")
 </script>
 
 <div id="accordion" class="flex flex-col border rounded-lg bg-white">
@@ -9,7 +11,7 @@
         on:click={() => open = !open}
         aria-hidden=true
     >
-        <p>{title}</p>
+        <p>{titleWithoutNumbers}</p>
          <img
             src={open ? "/icon-chevron-down.svg" : "/icon-chevron-up.svg"}
             alt="chevron-icon"
